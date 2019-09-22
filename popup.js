@@ -4,21 +4,21 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-// ga('create', 'UA-1146456-72', 'auto');
-// ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-// ga('require', 'displayfeatures');
+ga('create', 'UA-1146456-72', 'auto');
+ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
+ga('require', 'displayfeatures');
 
 var theTab,url,title;
 
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 	title = tabs[0].title;
 	url = tabs[0].url;
-	// ga('send',
-	//  	'pageview', {
- //  		'page': url,
- //  		'title': title
- //  	});
-	// ga('send', 'event', 'altDialog', 'open', url);
+	ga('send',
+	 	'pageview', {
+  		'page': url,
+  		'title': title
+  	});
+	ga('send', 'event', 'altDialog', 'open', url);
 	chrome.tabs.executeScript(
 		tabs[0].id,
 		{code:
@@ -45,7 +45,7 @@ let hideAlt = document.getElementById('hideAlt');
 
 hideAlt.onclick = function(element) {
 
-	//ga('send', 'event', 'hideAlt', 'click', url);
+	ga('send', 'event', 'hideAlt', 'click', url);
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 		chrome.tabs.executeScript(
 			tabs[0].id,
@@ -76,7 +76,7 @@ let showAlt = document.getElementById('showAlt');
 
 showAlt.onclick = function(element) {
 
-	//ga('send', 'event', 'showAlt', 'click', url);
+	ga('send', 'event', 'showAlt', 'click', url);
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 		chrome.tabs.executeScript(
 			tabs[0].id,
