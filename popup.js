@@ -30,7 +30,11 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 			`
 			var body = document.body;
 			var head = document.head || document.getElementsByTagName('head')[0];
-			var style = document.createElement('style');
+			
+			var createStyles = document.createElement('link');
+			createStyles.setAttribute('id','textaltcheck');
+			createStyles.setAttribute('rel','stylesheet');
+			createStyles.setAttribute('href', chrome.runtime.getURL('styles.css'));
 
 			var imgLinkSrc = chrome.runtime.getURL('images/link.svg');
 			var imgReviewSrc = chrome.runtime.getURL('images/caution.svg');
@@ -56,6 +60,8 @@ hideAlt.onclick = function(element) {
 			tabs[0].id,
 			{code:
 				`
+				var styles = document.getElementById('textaltcheck');
+				styles.remove();
 				if (body.classList.contains('textaltcheck')){
 					images = Array.from(document.querySelectorAll('img.altImage'));
 					body.classList.remove('textaltcheck');
@@ -87,21 +93,8 @@ showAlt.onclick = function(element) {
 			tabs[0].id,
 			{code:
 					`
+					
 					var images = Array.from(document.querySelectorAll('img'));
-
-					css = '.textaltcheck a, .textaltcheck div, .textaltcheck span {background-image: none !important;}';
-					css += '.textaltcheck .altImage{outline: 2px dotted #32CD32 !important; outline-offset: -4px !important;  background: #fff !important; opacity: .5 !important;}';
-					css += '.textaltcheck .altWrapper{padding: 2px !important; margin: -2px !important; position: relative !important;}';
-					css += '.textaltcheck .altWrapper .altImage{position: relative !important;}';
-					css += '.textaltcheck .altWrapper .altSpan{height: auto !important; width: auto !important; line-height: 1em !important; z-index: 1; position: absolute !important; top: 5px !important; left: 5px !important; border: 1px solid #fff !important; background: #008000 !important; color: #fff !important; padding: 2px 8px !important; margin: 2px 8px !important; font-size: 14px !important; font-weight: normal !important; font-family: arial !important; text-transform: none  !important;}';
-					css += '.textaltcheck .hasLink{border: 2px dotted #e71836 !important;}';
-					css += '.textaltcheck .hasLink .altImage{outline: 0px !important;}';
-					css += '.textaltcheck .hasLink .altSpan{background: #e71836 !important;}';
-					css += '.textaltcheck .imgLink, .textaltcheck .imgNull, .textaltcheck .imgReview {max-width: 16px !important; max-height: 16px !important; height: auto !important; display: inline !important; margin: 5px 4px !important; width: auto !important; max-width: auto !important; vertical-align: middle; position: relative !important;}'
-
-					style.innerHTML = css;
-
-					head.appendChild(style);
 
 					function traverseChildren(node,type){
 
@@ -180,6 +173,7 @@ showAlt.onclick = function(element) {
 					}
 
 					if( !body.classList.contains('textaltcheck') ){
+						body.appendChild(createStyles);
 						body.classList.add('textaltcheck');
 						images.forEach(image => {
 							let alt = image.alt || 'Null';

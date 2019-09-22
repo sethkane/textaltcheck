@@ -19,6 +19,7 @@
 		"128": "images/alt128.png"
 	},
 	"web_accessible_resources": [
-		"images/*.svg"
+		"images/*.svg",
+		"styles.css"
 	]
 }
