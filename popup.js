@@ -8,8 +8,13 @@ ga('create', 'UA-1146456-72', 'auto');
 ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
 ga('require', 'displayfeatures');
 
-var theTab,url,title;
+let logIssue = document.getElementById('logIssue');
+logIssue.onclick = function(element) {
+	ga('send', 'event', 'logIssue', 'click', url);
+	alert('Issue Logged.  Thank you!');
+};
 
+var theTab,url,title;
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 	title = tabs[0].title;
 	url = tabs[0].url;
