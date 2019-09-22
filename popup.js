@@ -4,7 +4,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-1146456-72', 'auto');
+//ga('create', 'UA-1146456-72', 'auto');
 ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
 ga('require', 'displayfeatures');
 
@@ -97,7 +97,7 @@ showAlt.onclick = function(element) {
 					css += '.textaltcheck .hasLink{border: 2px dotted #e71836 !important;}';
 					css += '.textaltcheck .hasLink .altImage{outline: 0px !important;}';
 					css += '.textaltcheck .hasLink .altSpan{background: #e71836 !important;}';
-					css += '.textaltcheck .imgLink, .textaltcheck .imgNull, .textaltcheck .imgReview {max-width: 16px !important; max-height: 16px !important; display: inline !important; margin: 5px 4px !important; width: auto !important; max-width: auto !important; vertical-align: middle; position: relative !important;}'
+					css += '.textaltcheck .imgLink, .textaltcheck .imgNull, .textaltcheck .imgReview {max-width: 16px !important; max-height: 16px !important; height: auto !important; display: inline !important; margin: 5px 4px !important; width: auto !important; max-width: auto !important; vertical-align: middle; position: relative !important;}'
 
 					style.innerHTML = css;
 
