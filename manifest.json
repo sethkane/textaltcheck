@@ -1,6 +1,6 @@
 {
 	"name": "How Is Your Text Alternative?",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Show an overlay of all the ALT text of a website to better evaluated it's usage.",
 	"manifest_version": 2,
 	"permissions": ["activeTab", "declarativeContent", "storage"],
@@ -19,6 +19,7 @@
 		"128": "images/alt128.png"
 	},
 	"web_accessible_resources": [
-		"images/*.svg"
+		"images/*.svg",
+		"styles.css"
 	]
 }
