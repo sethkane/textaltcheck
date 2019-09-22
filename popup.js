@@ -104,7 +104,6 @@ showAlt.onclick = function(element) {
 					head.appendChild(style);
 
 					function traverseChildren(node,type){
-						console.log(type);
 
 						if(node.classList.contains('altSpan')){
 
