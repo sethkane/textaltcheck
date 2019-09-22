@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			main{
+				padding: 25px;
+				width: 300px;
+				font-family: 'Roboto', helvetica;
+			}
+			h1{
+				display: inline;
+				position: relative;
+				top: -18px;
+				font-size:18px;
+			}
+			img{
+				margin-left: -7px;
+			}
+			button {
+				display:inline-block;
+				padding:0.7em 1em;
+				margin:0 0.3em 0.3em 0;
+				border-radius:0.15em;
+				box-sizing: border-box;
+				text-decoration:none;
+				font-family:'Roboto',sans-serif;
+				text-transform:uppercase;
+				font-weight:400;
+				color:#FFFFFF;
+				background-color:#3369ff;
+				box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+				text-align:center;
+				position:relative;
+			}
+			button:hover{
+				box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.65);
+			}
+			dl {
+			  display: flex;
+			  flex-wrap: wrap;
+			}
+			dt {
+			  width: 6%;
+			  padding-left: 4%;
+			  margin-bottom: 1em;
+			}
+			dd {
+			  margin-left: auto;
+			  margin-bottom: 1em;
+			  width: 90%;
+			}
+			.reset{
+				background-color:#e71836;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div>
+				<img src="images/alt48.png" alt>
+				<h1>Text Alternative Checker</h1>
+			</div>
+			<p>This feature toggles the Text Alternatives Checker to the on/off position for images found on the page.  All background images will be hidden when enabled.</p>	
+			<button id="showAlt">Show Text Alternatives</button>
+			<button id="hideAlt" class="reset">Reset</button>
+			<h2>Key:</h2>
+			<dl>
+				<dt><img src="images/link-black.svg" width="16" height="16" alt="Icon of link indication"></dt>
+				<dd>An image with a link wrapped around it. Reference: <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_blank">functional image</a></dd>
+				<dt><img src="images/police-black.svg" width="16" height="16" alt="Icon of removed from API indication"></dt>
+				<dd>An image with a link wrapped around it that has a null value.  Reference: <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_blank">functional image</a></dd>
+				<dt><img src="images/caution-black.svg" width="16" height="16" alt="Icon of needs review indication"></dt>
+				<dd>An image with a link wrapped around it that has a text alternative which needs review for context, reducancy, and other considerations. Reference: <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_blank">functional image</a>, <a href="https://www.w3.org/TR/WCAG21/#link-purpose-in-context" target="_blank">fink purpose</a> </dd>
+
+			</dl>
+			<p>Visit our <a href="https://github.com/sethkane/textaltcheck" target="_blank">Github Page</a> to ask questions, provide feedback, and more.</p>
+			<p><strong>Note:</strong> You might have to refresh the page to do a total reset. Icons from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></p>
+		</main>
+		<script src="popup.js"></script>
+	</body>
+</html>
