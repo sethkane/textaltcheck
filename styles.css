@@ -4,8 +4,7 @@
 .textaltcheck .altImage{
 	outline: 2px dotted #32CD32 !important;
 	outline-offset: -4px !important;
-	background: #fff !important;
-	opacity: .5 !important;
+	background: rgba(255,255,255,.5) !important;
 }
 .textaltcheck .altWrapper{
 	padding: 2px !important;

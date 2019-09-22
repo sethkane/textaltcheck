@@ -1,6 +1,6 @@
 {
 	"name": "How Is Your Text Alternative?",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Show an overlay of all the ALT text of a website to better evaluated it's usage.",
 	"manifest_version": 2,
 	"permissions": ["activeTab", "declarativeContent", "storage"],
