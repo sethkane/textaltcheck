@@ -1,4 +1,4 @@
-.textaltcheck a, .textaltcheck div, .textaltcheck span {
+.textaltcheck a, .textaltcheck div, .textaltcheck span, .textaltcheck section {
 	background-image: none !important;
 }
 .textaltcheck .altImage{
