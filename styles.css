@@ -1,10 +1,51 @@
-.textaltcheck a, .textaltcheck div, .textaltcheck span, .textaltcheck section {
-	background-image: none !important;
+.textaltcheck .altDecoration{
+	position: relative;
+}
+.textaltcheck .altDecoration div{
+	position: relative;
+}
+.textaltcheck .decoration{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	background-image: url(images/decoration.png);
+	z-index: 0;
+	white-space: nowrap;
+}
+.textaltcheck .decoration:before{
+	content: 'BG Image';
+	background: #e71836 !important;
+	color: #fff !important;
+	padding: 2px 8px !important; 
+	margin: 2px 0 0 8px!important; 
+	font-size: 14px !important; 
+	font-weight: normal !important; 
+	font-family: arial !important; 
+	text-transform: none  !important;
+	height: 22px;
+	width: 80px;
+	display: inline-block;
+}
+.textaltcheck .decoration:after{
+	content: url(images/web-image.svg);
+	position: absolute;
+	top: 0;
+	height: 20px;
+	width: 20px;
+	background: #e71836 !important;
+	color: #fff !important;
+	padding: 3px 2px 19px 2px !important; 
+	margin: 2px 8px 0 0px !important; 
+	font-size: 14px !important; 
+	font-weight: normal !important; 
+	font-family: arial !important; 
+	text-transform: none  !important;
 }
 .textaltcheck .altImage{
 	outline: 2px dotted #32CD32 !important;
 	outline-offset: -4px !important;
-	background: rgba(255,255,255,.5) !important;
+	background: rgba(255,255,255,.1) !important;
 }
 .textaltcheck .altWrapper{
 	padding: 2px !important;

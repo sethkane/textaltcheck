@@ -20,6 +20,7 @@
 	},
 	"web_accessible_resources": [
 		"images/*.svg",
+		"images/*.png",
 		"styles.css"
 	]
 }
