@@ -66,6 +66,18 @@ hideAlt.onclick = function(element) {
 					images.forEach(image => {
 						unWrap(image)
 					});
+
+					var decorations = document.querySelectorAll('.decoration');
+					for(var i = 0; i < decorations.length; i++){
+						decorations[i].remove();
+					}
+
+					var altDecoration = document.querySelectorAll('.altDecoration');
+					for(var i = 0; i < altDecoration.length; i++){
+						altDecoration[i].classList.remove('altDecoration');
+					}
+
+
 				}
 				`
 			}
@@ -83,6 +95,21 @@ showAlt.onclick = function(element) {
 			tabs[0].id,
 			{code:
 					`
+
+					function traverseForBackgrounds(){
+						var els = document.querySelectorAll('figure,section,span,div,a');
+						for(var i = 0; i < els.length; i++){
+							var el = els[i];
+							if(window.getComputedStyle(el).backgroundImage !== 'none'){
+								el.classList.add('altDecoration');
+								var decoration = document.createElement('span');
+								decoration.classList.add('decoration');
+								decoration.setAttribute('style', 'width:' + window.getComputedStyle(el).width + '; height:' + window.getComputedStyle(el).height + ';');
+								el.prepend(decoration);
+							}
+							
+						}
+					};
 					
 					var images = Array.from(document.querySelectorAll('img'));
 
@@ -126,7 +153,6 @@ showAlt.onclick = function(element) {
 					function traverseParents(node, alt, action){
 						if(node.nodeName === 'A'){
 
-
 							if(action === 'add'){
 								if( alt === 'Null' ) {
 									node.classList.add('hasLink')
@@ -165,6 +191,7 @@ showAlt.onclick = function(element) {
 					if( !body.classList.contains('textaltcheck') ){
 						body.appendChild(createStyles);
 						body.classList.add('textaltcheck');
+						traverseForBackgrounds();
 						images.forEach(image => {
 							let alt = image.alt || 'Null';
 							wrap(image, alt)
