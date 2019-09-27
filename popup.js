@@ -193,8 +193,10 @@ showAlt.onclick = function(element) {
 						body.classList.add('textaltcheck');
 						traverseForBackgrounds();
 						images.forEach(image => {
-							let alt = image.alt || 'Null';
-							wrap(image, alt)
+							if( image.offsetParent !== null){
+								let alt = image.alt || 'Null';
+								wrap(image, alt)
+							}
 						});
 					}
 					`
