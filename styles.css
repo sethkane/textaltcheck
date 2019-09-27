@@ -59,7 +59,7 @@
 	height: auto !important;
 	width: auto !important;
 	line-height: 1em !important; 
-	z-index: 1; 
+	z-index: 9999; 
 	position: absolute !important; 
 	top: 5px !important; 
 	left: 5px !important;
