@@ -82,7 +82,7 @@
 }
 .textaltcheck .hasLink{
 	border: 2px dotted #e71836 !important; 
-	display: inline-block !important;
+	/*display: inline-block !important;*/
 }
 .textaltcheck .hasLink *:before{
 	padding: 0 !important;
