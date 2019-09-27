@@ -1,0 +1,28 @@
+main{
+	padding: 25px;
+	width: 300px;
+	font-family: 'Roboto', helvetica;
+}
+h1{
+	display: inline;
+	position: relative;
+	top: -18px;
+	font-size:18px;
+}
+img{
+	margin-left: -7px;
+}
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+dt {
+  width: 6%;
+  padding-left: 4%;
+  margin-bottom: 1em;
+}
+dd {
+  margin-left: auto;
+  margin-bottom: 1em;
+  width: 90%;
+}
