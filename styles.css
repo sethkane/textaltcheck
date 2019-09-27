@@ -1,3 +1,6 @@
+.textaltcheck {
+	border: 4px solid #32CD32 !important;
+}
 .textaltcheck .altDecoration{
 	position: relative;
 }
@@ -100,6 +103,7 @@
 	transform: none !important;
 	white-space: nowrap !important;
 	float: none !important;
+	background: none !important;
 }
 
 				
