@@ -51,11 +51,15 @@
 	outline: 2px dotted #32CD32 !important;
 	outline-offset: -4px !important;
 	background: rgba(255,255,255,.1) !important;
+	position: relative !important;
+	width: 100%;
+	height: 100%;
 }
 .textaltcheck .altWrapper{
 	padding: 2px !important;
 	margin: -2px !important;
 	position: relative !important;
+	display: inline-block !important;
 }
 .textaltcheck .altWrapper .altSpan{
 	height: auto !important;
@@ -80,6 +84,11 @@
 	border: 2px dotted #e71836 !important; 
 	display: inline-block !important;
 }
+.textaltcheck .hasLink *:before{
+	padding: 0 !important;
+	margin: 0 !important;
+	content: none !important;
+}
 .textaltcheck .hasLink .altImage{
 	outline: 0px !important;
 }
@@ -89,6 +98,7 @@
 .textaltcheck .imgLink, .textaltcheck .imgNull, .textaltcheck .imgReview {
 	max-width: 16px !important;
 	max-height: 16px !important;
+	min-height: auto !important;
 	height: auto !important;
 	display: inline !important;
 	margin: 5px 4px !important;
@@ -104,6 +114,7 @@
 	white-space: nowrap !important;
 	float: none !important;
 	background: none !important;
+	opacity: 1 !important;
 }
 
 				
