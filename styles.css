@@ -10,7 +10,7 @@
 	left: 0;
 	display: block;
 	background-image: url(images/decoration.png);
-	z-index: 0;
+	z-index: 9999;
 	white-space: nowrap;
 }
 .textaltcheck .decoration:before{
