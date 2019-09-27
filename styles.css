@@ -17,25 +17,27 @@
 	content: 'BG Image';
 	background: #e71836 !important;
 	color: #fff !important;
-	padding: 2px 8px !important; 
+	padding: 0px 8px !important; 
 	margin: 2px 0 0 8px!important; 
 	font-size: 14px !important; 
 	font-weight: normal !important; 
 	font-family: arial !important; 
 	text-transform: none  !important;
-	height: 22px;
-	width: 80px;
 	display: inline-block;
+	line-height: 20px;
+	height: 24px;
+	max-height: 24px;
 }
 .textaltcheck .decoration:after{
 	content: url(images/web-image.svg);
 	position: absolute;
 	top: 0;
-	height: 20px;
+	height: 24px;
+	max-height: 24px;
 	width: 20px;
 	background: #e71836 !important;
 	color: #fff !important;
-	padding: 3px 2px 19px 2px !important; 
+	padding: 0 !important; 
 	margin: 2px 8px 0 0px !important; 
 	font-size: 14px !important; 
 	font-weight: normal !important; 
