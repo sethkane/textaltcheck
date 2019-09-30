@@ -53,7 +53,7 @@
 	padding: 2px !important;
 	margin: -2px !important;
 	width: auto !important;
-	position: sticky !important;
+	position: unset !important;
 	transform: none !important;
 }
 .textaltcheck .altWrapper .altSpan{
@@ -117,6 +117,7 @@
 	float: none !important;
 	background: none !important;
 	opacity: 1 !important;
+	visibility: visible !important;
 }
 
 				
