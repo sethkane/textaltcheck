@@ -53,7 +53,7 @@
 	padding: 2px !important;
 	margin: -2px !important;
 	width: auto !important;
-	position: unset !important;
+	position: relative !important;
 	transform: none !important;
 }
 .textaltcheck .altWrapper .altSpan{
@@ -75,11 +75,12 @@
 	font-family: arial !important; 
 	text-transform: none  !important;
 	text-align: left !important;
-	white-space: normal;
+	white-space: normal !important;
+	border-radius: 0px !important;
 }
 .textaltcheck .hasLink{
 	border: 2px dotted #e71836 !important; 
-	/*display: inline-block !important;*/
+	display: inline-block !important;
 }
 .textaltcheck .hasLink *:before{
 	padding: 0 !important;
